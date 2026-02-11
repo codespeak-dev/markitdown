@@ -234,6 +234,59 @@ GENERAL_TEST_VECTORS = [
         ],
         must_not_include=[],
     ),
+    FileTestVector(
+        filename="test_email.eml",
+        mimetype="message/rfc822",
+        charset="utf-8",
+        url=None,
+        must_include=[
+            "**From:** Jane Doe <jane.doe@example.com>",
+            "**To:** John Smith <john.smith@example.com>",
+            "**Cc:** team@example.com",
+            "**Subject:** Test Email for MarkItDown ✓",
+            "**Date:** Thu, 01 May 2025 10:30:00 +0000",
+            "7f3b2a1e-9c4d-4e5f-8a6b-0d1e2f3a4b5c",
+            "**Attachments:**",
+            "report.pdf (application/pdf",
+            "diagram.png (image/png",
+        ],
+        must_not_include=[
+            "=?UTF-8?",
+        ],
+    ),
+    FileTestVector(
+        filename="test_email_html_only.eml",
+        mimetype="message/rfc822",
+        charset="utf-8",
+        url=None,
+        must_include=[
+            "**From:** Alice <alice@example.com>",
+            "**Subject:** HTML Only Email",
+            "a1b2c3d4-html-only-5e6f7g8h",
+            "# Important Update",
+            "**only HTML**",
+        ],
+        must_not_include=[
+            "<html>",
+            "<b>",
+        ],
+    ),
+    FileTestVector(
+        filename="test_email_nested.eml",
+        mimetype="message/rfc822",
+        charset="utf-8",
+        url=None,
+        must_include=[
+            "**From:** Manager <manager@example.com>",
+            "**Subject:** Forwarded Message",
+            "fwd-outer-9a8b7c6d-5e4f3g2h",
+            "**Nested Message:**",
+            "> **From:** Original Sender <sender@example.com>",
+            "> **Subject:** Original Subject",
+            "nested-inner-1a2b3c4d-5e6f7g8h",
+        ],
+        must_not_include=[],
+    ),
 ]
 
 

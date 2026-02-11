@@ -1,0 +1,58 @@
+MIME-Version: 1.0
+From: =?UTF-8?B?SmFuZSBEb2U=?= <jane.doe@example.com>
+To: John Smith <john.smith@example.com>
+Cc: team@example.com
+Subject: =?UTF-8?Q?Test_Email_for_MarkItDown_=E2=9C=93?=
+Date: Thu, 01 May 2025 10:30:00 +0000
+Content-Type: multipart/mixed; boundary="boundary_main_abc123"
+
+--boundary_main_abc123
+Content-Type: multipart/alternative; boundary="boundary_alt_def456"
+
+--boundary_alt_def456
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello John,
+
+This is a test email for the MarkItDown EML converter.
+Unique identifier: 7f3b2a1e-9c4d-4e5f-8a6b-0d1e2f3a4b5c
+
+Please review the attached documents.
+
+Best regards,
+Jane Doe
+
+--boundary_alt_def456
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<p>Hello John,</p>
+<p>This is a <b>test email</b> for the MarkItDown EML converter.</p>
+<p>Unique identifier: 7f3b2a1e-9c4d-4e5f-8a6b-0d1e2f3a4b5c</p>
+<p>Please review the attached documents.</p>
+<p>Best regards,<br>Jane Doe</p>
+</body>
+</html>
+
+--boundary_alt_def456--
+
+--boundary_main_abc123
+Content-Type: application/pdf; name="report.pdf"
+Content-Disposition: attachment; filename="report.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5k
+b2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4K
+
+--boundary_main_abc123
+Content-Type: image/png; name="diagram.png"
+Content-Disposition: attachment; filename="diagram.png"
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9
+awAAAABJRU5ErkJggg==
+
+--boundary_main_abc123--

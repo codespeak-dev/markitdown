@@ -1,0 +1,19 @@
+MIME-Version: 1.0
+From: Alice <alice@example.com>
+To: Bob <bob@example.com>
+Subject: HTML Only Email
+Date: Fri, 02 May 2025 14:00:00 +0000
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<h1>Important Update</h1>
+<p>Identifier: a1b2c3d4-html-only-5e6f7g8h</p>
+<p>This email has <b>only HTML</b> content and no plain text part.</p>
+<ul>
+<li>First item</li>
+<li>Second item</li>
+</ul>
+</body>
+</html>

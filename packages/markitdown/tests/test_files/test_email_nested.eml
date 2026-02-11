@@ -1,0 +1,27 @@
+MIME-Version: 1.0
+From: Manager <manager@example.com>
+To: Team <team@example.com>
+Subject: Forwarded Message
+Date: Sat, 03 May 2025 09:00:00 +0000
+Content-Type: multipart/mixed; boundary="outer_boundary_xyz"
+
+--outer_boundary_xyz
+Content-Type: text/plain; charset="utf-8"
+
+Please see the forwarded message below.
+Outer identifier: fwd-outer-9a8b7c6d-5e4f3g2h
+
+--outer_boundary_xyz
+Content-Type: message/rfc822
+
+MIME-Version: 1.0
+From: Original Sender <sender@example.com>
+To: Manager <manager@example.com>
+Subject: Original Subject
+Date: Fri, 02 May 2025 08:00:00 +0000
+Content-Type: text/plain; charset="utf-8"
+
+This is the original nested message.
+Nested identifier: nested-inner-1a2b3c4d-5e6f7g8h
+
+--outer_boundary_xyz--

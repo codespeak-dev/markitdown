@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "schema": {
+            "external_apis": {
+                "type": "file",
+                "relative_path": "external_apis.json",
+                "format": "json",
+                "by_task": "AnalyzeExternalApis"
+            },
+            "console_app_dev_command": {
+                "type": "file",
+                "relative_path": "console_app_dev_command.txt",
+                "format": "text",
+                "by_task": "GenerateCliUsageExamples"
+            },
+            "console_app_usage_examples": {
+                "type": "file",
+                "relative_path": "console_app_usage_examples.json",
+                "format": "json",
+                "by_task": "GenerateCliUsageExamples"
+            },
+            "spec": {
+                "type": "file",
+                "relative_path": "spec.processed.md",
+                "format": "text",
+                "by_task": "ProcessSpec"
+            },
+            "implemented_change_requests": {
+                "type": "file",
+                "relative_path": "implemented_change_requests.json",
+                "format": "json",
+                "by_task": "FinalizeChangeRequest"
+            },
+            "sha_to_checkpoint": {
+                "type": "file",
+                "relative_path": "sha_to_checkpoint.json",
+                "format": "json"
+            }
+        },
+        "version": "0.2.0"
+    },
+    "phases_state": {
+        "spec_file": "packages/markitdown/src/markitdown/converters/eml_converter.cs.md",
+        "spec": ".codespeak/spec.processed.md",
+        "old_spec": null,
+        "spec_diff": null,
+        "test_run_instructions": "Determine how to run tests for this project. Check for Python project management tools (uv, hatch, poetry, pip) by inspecting pyproject.toml and other config files. Use the appropriate command to run the test suite (e.g. `uv run pytest` for uv projects, `hatch run test` for hatch projects, `poetry run pytest` for poetry projects, `pytest` or `python -m pytest` otherwise).",
+        "agents_md_content": "A virtual environment is pre-configured at the project root (`.venv/`). Hatch is installed there.\n\n# Running Tests\n\nFrom `packages/markitdown/`, run `GITHUB_ACTIONS=1 hatch test`. Skipping remote URL testing is necessary for any new work.\n\nThe full test suite takes several minutes.\n\n# Adding Tests\n\nThe primary testing mechanism is the **test vector framework**:\n\n1. Add test fixture files to `tests/test_files/`\n2. Add `FileTestVector` entries to `tests/_test_vectors.py`\n\nThe parametrized tests in `test_module_vectors.py` will automatically exercise your converter through all standard code paths.\n",
+        "managed_files": {
+            "packages/markitdown/src/markitdown/converters/eml_converter.cs.md": [
+                "packages/markitdown/src/markitdown/converters/_eml_converter.py",
+                "packages/markitdown/tests/test_files/test_email.eml",
+                "packages/markitdown/tests/test_files/test_email_html_only.eml",
+                "packages/markitdown/tests/test_files/test_email_nested.eml"
+            ]
+        }
+    }
+}
