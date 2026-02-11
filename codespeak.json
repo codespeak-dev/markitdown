@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "profile_name": "mixed_mode",
+  "specs": [
+    "packages/markitdown/src/markitdown/converters/eml_converter.cs.md"
+  ],
+  "whitelisted_files": [
+    "packages/markitdown/src/markitdown/converters/__init__.py",
+    "packages/markitdown/src/markitdown/_markitdown.py",
+    "packages/markitdown/tests/_test_vectors.py"
+  ]
+}
