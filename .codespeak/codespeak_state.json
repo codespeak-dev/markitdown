@@ -52,6 +52,9 @@
                 "packages/markitdown/tests/test_files/test_email.eml",
                 "packages/markitdown/tests/test_files/test_email_html_only.eml",
                 "packages/markitdown/tests/test_files/test_email_nested.eml"
+            ],
+            "packages/markitdown/src/markitdown/converters/_outlook_msg_converter.cs.md": [
+                "packages/markitdown/src/markitdown/converters/_outlook_msg_converter.py"
             ]
         }
     }
