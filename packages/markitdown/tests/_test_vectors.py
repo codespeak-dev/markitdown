@@ -88,6 +88,26 @@ GENERAL_TEST_VECTORS = [
         must_not_include=[],
     ),
     FileTestVector(
+        filename="unicode.msg",
+        mimetype=None,  # MIME type detection may not work for this file
+        charset=None,
+        url=None,
+        must_include=[
+            "# Email Message",
+            "**From:** brizhou@gmail.com",
+            "**To:** brianzhou@me.com",
+            "**Cc:** Brian Zhou",
+            "**Subject:** Test for TIF files",
+            "## Content",
+            "This is a test email to experiment with the MS Outlook MSG Extractor",
+            "## Attachments",
+            ".tif",  # TIF attachment should be present
+            "(946.9 KB)",  # File size should be present and human-readable
+            "(1008.9 KB)",  # Second attachment size
+        ],
+        must_not_include=[],
+    ),
+    FileTestVector(
         filename="test.pdf",
         mimetype="application/pdf",
         charset=None,
